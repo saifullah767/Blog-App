@@ -1,62 +1,51 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Project Name : Blog App
 
-> Description the project.
-
+> The Blog app will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Ruby on rails
+- postgresql
 
-## Live Demo (if available)
+## Development set up
 
-[Live Demo Link](https://livedemo.com)
+Clone Repository using
 
+`git clone https://github.com/saifullah767/Blog-App.git`
 
-## Getting Started
+Move into project directory
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+`cd Blog-App`
 
+### Setup Database 
+- Make sure that your Postgres database is installed.
+-  Open the file config\database.yml
+- Modify the connection parameters to point your Postgres      Database:
+    `username: [your_user]`
+    `password: [your_password]`
 
-To get a local copy up and running follow these simple example steps.
+- If required drop existing database : `rails db:drop`
+- Create databases: `rails db:create`
+- Create db structure including tables : `rails db:migrate`
+- If required seed initial data (stored in db\seeds.rb file): `rails db:seed`
 
-### Prerequisites
+### Run App
+- If required (Not for testing) run `rails s`
+- Visit http://localhost:3000/ in your browser!
 
-### Setup
+## Author
 
-### Install
+👤 **Saifullah**
 
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [saifullah](https://github.com/saifullah767)
+- LinkedIn: [saifullah](https://linkedin.com/in/saifkj)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
@@ -64,9 +53,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse team for guidance
 
 ## 📝 License
 
