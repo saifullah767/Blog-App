@@ -1,0 +1,17 @@
+current directory: D:/module 5/Blog-App/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+E:/apps/Ruby31-x64/bin/ruby.exe -I E:/apps/Ruby31-x64/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: D:/module 5/Blog-App/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20220813-6464-iei9ps sitelibdir\=./.gem.20220813-6464-iei9ps clean
+
+current directory: D:/module 5/Blog-App/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20220813-6464-iei9ps sitelibdir\=./.gem.20220813-6464-iei9ps
+generating debug-x64-mingw-ucrt.def
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: D:/module 5/Blog-App/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20220813-6464-iei9ps sitelibdir\=./.gem.20220813-6464-iei9ps install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20220813-6464-iei9ps/debug

@@ -5,6 +5,7 @@ ruby '3.1.2'
 
 source 'https://rubygems.org'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'rubocop-rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
@@ -72,4 +73,9 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+end
+
+group :development, :test do
+  gem 'rspec-rails', ">= 3.9.0"
+  gem 'ffi', '~> 1.15', '>= 1.15.5'
 end
