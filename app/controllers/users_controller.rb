@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    # puts params
+    @user = User.includes(:posts).find(params[:user_id])
+    @posts = User.find(params[:user_id]).recent_posts
   end
 end
