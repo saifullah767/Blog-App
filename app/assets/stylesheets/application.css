@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- #users {
+#users {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,11 +90,11 @@ button {
   margin-top: 50px;
 }
 
-input[type='text'] {
+input[type="text"] {
   margin: 10px;
 }
 
-input[type='submit'] {
+input[type="submit"] {
   margin: 30px;
 }
 
