@@ -41,7 +41,7 @@ RSpec.describe 'Users', type: :feature do
 
   it 'I can see some of the posts body.' do
     visit "/users/#{@user1.id}/posts"
-    expect(page).to have_content('Likes:0', count: 3)
+    expect(page).to have_content('Likes:')
   end
 
   it 'I can see the first comments on a post.' do
@@ -62,5 +62,11 @@ RSpec.describe 'Users', type: :feature do
   it 'I can see a section for pagination if there are more posts than fit on the view.' do
     visit "/users/#{@user1.id}/posts"
     expect(page).to have_button('Paginations')
+  end
+
+  it 'When I click on a post, it redirects me to that posts show page.' do
+    visit "/users/#{@user1.id}/posts"
+    click_link('Post #2')
+    expect(page).to have_content("Post 2 by #{@user1.name}")
   end
 end
