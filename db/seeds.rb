@@ -42,7 +42,7 @@ Comment.create(post_id: eighth_post.id, author_id: second_user.id, text: 'Hi Lil
 
 #Create at least 4 likes by you created by running the following code:
 
-first_like= Like.create(post_id: first_post.id, author_id: first_user.id)
+first_like= 
 Like.create(post_id: second_post.id, author_id: second_user.id)
 Like.create(post_id: third_post.id, author_id: first_user.id)
 Like.create(post_id: fourth_post.id, author_id: second_user.id)
