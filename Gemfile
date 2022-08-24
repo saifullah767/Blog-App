@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
+gem 'bullet'
+
 source 'https://rubygems.org'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
