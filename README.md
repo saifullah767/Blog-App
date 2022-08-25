@@ -43,6 +43,13 @@ Move into project directory
 - GitHub: [saifullah](https://github.com/saifullah767)
 - LinkedIn: [saifullah](https://linkedin.com/in/saifkj)
 
+👤 **Axel Soler**
+
+- GitHub: [@AxelSoler](https://github.com/AxelSoler)
+- LinkedIn: [Axel Soler](https://www.linkedin.com/in/axel-soler-685985232/)
+- Twitter: [Axel Soler](https://twitter.com/AxelSoler18)
+
+
 ## 🤝 Contributing
 
 
