@@ -5,6 +5,8 @@ ruby '3.1.2'
 
 gem 'bullet'
 
+gem 'devise'
+
 source 'https://rubygems.org'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
