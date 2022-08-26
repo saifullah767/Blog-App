@@ -14,6 +14,7 @@ RSpec.describe 'Posts', type: :request do
 
     it 'body includes correct placeholder text' do
       expect(response.body).to include('List of all posts for a given user')
+
     end
     # it 'Correct template was rendered.' do
     #   expect(response).to render_template(:index)
