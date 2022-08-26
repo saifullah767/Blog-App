@@ -3,18 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
-<<<<<<< HEAD
-=======
 gem 'bullet'
 
 source 'https://rubygems.org'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
->>>>>>> 9806e8ececf4a1407ab7d16abda977d4b8f6dfe4
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
-
-gem 'rubocop', '>= 1.0', '< 2.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'

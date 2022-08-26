@@ -1,9 +1,7 @@
 require 'rails_helper'
-<<<<<<< HEAD
 RSpec.describe UsersHelper, type: :helper do
   pending "add some examples to (or delete) #{__FILE__}"
 end
-=======
 
 # Specs in this file have access to a helper object that includes
 # the UsersHelper. For example:
@@ -18,4 +16,3 @@ end
 # RSpec.describe UsersHelper, type: :helper do
 #   pending "add some examples to (or delete) #{__FILE__}"
 # end
->>>>>>> 9806e8ececf4a1407ab7d16abda977d4b8f6dfe4
