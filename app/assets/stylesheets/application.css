@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- #users {
+#users {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,19 +76,19 @@
   margin-right: auto;
   width: 375px;
 }
-.all_users{
+.all_users {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
 }
 
-.user_element{
+.user_element {
   display: flex;
-    padding: 20px;
-    column-gap: 28px;
-    margin: 9px;
-    background-color: #efecec;
+  padding: 20px;
+  column-gap: 28px;
+  margin: 9px;
+  background-color: #efecec;
 }
 
 button {
@@ -104,11 +104,11 @@ button {
   margin-top: 50px;
 }
 
-input[type='text'] {
+input[type="text"] {
   margin: 10px;
 }
 
-input[type='submit'] {
+input[type="submit"] {
   margin: 30px;
 }
 
