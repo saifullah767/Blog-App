@@ -6,25 +6,19 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+#Create at least one user by running the following code:
+require 'json'
 
-first_user = User.create(name: "Bob", image: "https://icon-library.com/images/person-png-icon/person-png-icon-29.jpg", bio: "Peruvian Chef.", posts_counter: 0)
-second_user = User.create(name: "Carl", image: "https://icon-library.com/images/person-png-icon/person-png-icon-29.jpg", bio: "Peruvian Chef.", posts_counter: 0)
-third_user = User.create(name: "Homer", image: "https://icon-library.com/images/person-png-icon/person-png-icon-29.jpg", bio: "Peruvian Chef.", posts_counter: 0)
+first_user = User.create(name: 'Tom', image: 'https://w7.pngwing.com/pngs/563/269/png-transparent-tom-cat-tom-and-jerry-cat-mammal-animals-cat-like-mammal.png', bio: 'Teacher from Mexico.', posts_counter: 0)
+second_user = User.create(name: 'Lilly', image: 'https://images.squarespace-cdn.com/content/v1/5b565fba36099b350111a36d/1560532927781-OY0Y88ZZ8R3EE12XVKB2/lilly-4796.jpg?format=1000w', bio: 'Teacher from Poland.', posts_counter: 0)
 
+#Create at least 4 posts written by one of the users you created by running the following code:
 
-first_post = Post.create(author_id: first_user.id, title: "Hello", text: "This is my first post", comments_counter: 0, likes_counter: 0)
-second_post = Post.create(author_id: first_user.id, title: "Hello", text: "This is my second post", comments_counter: 0, likes_counter: 0)
-third_post = Post.create(author_id: first_user.id, title: "Hello", text: "This is my third post", comments_counter: 0, likes_counter: 0)
-fourth_post = Post.create(author_id: first_user.id, title: "Hello", text: "This is my fourth post", comments_counter: 0, likes_counter: 0)
+first_post = Post.create(author_id: first_user.id, title: 'Hello', text: 'This is my first post', comments_counter: 0, likes_counter: 0)
+second_post = Post.create(author_id: first_user.id, title: 'Hello', text: 'This is my second post', comments_counter: 0, likes_counter: 0)
+third_post = Post.create(author_id: first_user.id, title: 'Hello', text: 'This is my third post', comments_counter: 0, likes_counter: 0)
+fourth_post = Post.create(author_id: first_user.id, title: 'Hello', text: 'This is my fourth post', comments_counter: 0, likes_counter: 0)
 
-<<<<<<< HEAD
-Comment.create(post_id: first_post.id, author_id: second_user.id, text: "Hi Tom!")
-Comment.create(post_id: first_post.id, author_id: second_user.id, text: "Hi Jenny!")
-Comment.create(post_id: first_post.id, author_id: second_user.id, text: "Hi Mike!")
-Comment.create(post_id: first_post.id, author_id: second_user.id, text: "Hi Peter!")
-Comment.create(post_id: first_post.id, author_id: second_user.id, text: "Hi Luke!")
-Comment.create(post_id: first_post.id, author_id: second_user.id, text: "Hi Steve!")
-=======
 fifth_post = Post.create(author_id: second_user.id, title: 'Hello', text: 'This is my first post', comments_counter: 0, likes_counter: 0)
 sixth_post = Post.create(author_id: second_user.id, title: 'Hello', text: 'This is my second post', comments_counter: 0, likes_counter: 0)
 seventh_post = Post.create(author_id: second_user.id, title: 'Hello', text: 'This is my third post', comments_counter: 0, likes_counter: 0)
@@ -48,7 +42,7 @@ Comment.create(post_id: eighth_post.id, author_id: second_user.id, text: 'Hi Lil
 
 #Create at least 4 likes by you created by running the following code:
 
-first_like= 
+first_like= Like.create(post_id: first_post.id, author_id: first_user.id)
 Like.create(post_id: second_post.id, author_id: second_user.id)
 Like.create(post_id: third_post.id, author_id: first_user.id)
 Like.create(post_id: fourth_post.id, author_id: second_user.id)
@@ -141,7 +135,7 @@ puts(first_post.recent_comments.to_json)
 first_post.update_posts_counter
 puts
 puts('Post counter: ')
-puts(first_post.author.post_counter)
+puts(first_post.author.posts_counter)
 
 first_comment.update_comments_counter
 puts('Comments counter: ')
@@ -161,7 +155,7 @@ puts(fifth_post.recent_comments.to_json)
 fifth_post.update_posts_counter
 puts
 puts('Post counter: ')
-puts(fifth_post.author.post_counter)
+puts(fifth_post.author.posts_counter)
 
 second_comment.update_comments_counter
 puts('Comments counter: ')
@@ -170,4 +164,3 @@ puts(second_comment.post.comments_counter)
 second_like.update_likes_counter
 puts('likes counter: ')    
 puts(second_like.post.likes_counter)
->>>>>>> 9806e8ececf4a1407ab7d16abda977d4b8f6dfe4

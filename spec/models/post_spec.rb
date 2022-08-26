@@ -1,36 +1,47 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject do
-    Post.new(author_id: 123, title: 'Hello', text: 'First post', comments_counter: 0, likes_counter: 0)
+  before :each do
+    @first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                              bio: 'Teacher from Mexico.', post_counter: 0)
+    @first_user.save
+
+    @post = Post.create(author_id: @first_user.id, title: 'Hello', text: 'This is my first post', comments_counter: 0,
+                        likes_counter: 0)
+    @post.save
   end
+  context 'Posts validations' do
+    it 'Title must not be blank.' do
+      @post.title = ''
+      expect(@post).to_not be_valid
+    end
 
-  before { subject.save }
+    it 'Title must not exceed 250 characters' do
+      @post.title = 'A' * 251
+      expect(@post).to_not be_valid
+    end
 
-  it 'title should be present' do
-    subject.title = nil
-    expect(subject).to_not be_valid
-  end
+    it 'CommentsCounter must be an integer greater than or equal to zero' do
+      @post.comments_counter = -1
+      expect(@post).to_not be_valid
+    end
 
-  it 'Title must not exceed 250 characters.' do
-    # rubocop:disable Layout/LineLength
-    subject.title = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
-    # rubocop:enable Layout/LineLength
-    expect(subject).to_not be_valid
-  end
+    it 'LikesCounter must be an integer greater than or equal to zero.' do
+      @post.likes_counter = -1
+      expect(@post).to_not be_valid
+    end
 
-  it 'text should be present' do
-    subject.text = nil
-    expect(subject).to_not be_valid
-  end
-
-  it 'CommentsCounter must be an integer greater than or equal to zero.' do
-    subject.comments_counter = -3
-    expect(subject).to_not be_valid
-  end
-
-  it 'LikesCounter must be an integer greater than or equal to zero.' do
-    subject.likes_counter = -4
-    expect(subject).to_not be_valid
+    it 'PostsCounter must be an integer greater than or equal to zero.' do
+      @post.update_posts_counter
+      @post.save
+      expect(@post.author.post_counter).to be > 0
+    end
+    it 'validate recent comments method' do
+      comment1 = Comment.create(text: 'This is my first comment', post_id: @post.id, author_id: @first_user.id)
+      comment1.save
+      comment2 = Comment.create(text: 'This is my second comment', post_id: @post.id, author_id: @first_user.id)
+      comment2.save
+      expect(@post.recent_comments).to eq([comment1, comment2])
+    end
   end
 end
