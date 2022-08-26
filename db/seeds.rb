@@ -9,8 +9,8 @@
 #Create at least one user by running the following code:
 require 'json'
 
-first_user = User.create(name: 'Tom', photo: 'https://w7.pngwing.com/pngs/563/269/png-transparent-tom-cat-tom-and-jerry-cat-mammal-animals-cat-like-mammal.png', bio: 'Teacher from Mexico.', post_counter: 0)
-second_user = User.create(name: 'Lilly', photo: 'https://yt3.ggpht.com/ytc/AMLnZu9ywtMiKhRf2B6F7Yfx1nrsZQW1TbknNbJuaYTbJg=s900-c-k-c0x00ffffff-no-rj', bio: 'Teacher from Poland.', post_counter: 0)
+first_user = User.create(name: 'Tom', image: 'https://w7.pngwing.com/pngs/563/269/png-transparent-tom-cat-tom-and-jerry-cat-mammal-animals-cat-like-mammal.png', bio: 'Teacher from Mexico.', posts_counter: 0)
+second_user = User.create(name: 'Lilly', image: 'https://images.squarespace-cdn.com/content/v1/5b565fba36099b350111a36d/1560532927781-OY0Y88ZZ8R3EE12XVKB2/lilly-4796.jpg?format=1000w', bio: 'Teacher from Poland.', posts_counter: 0)
 
 #Create at least 4 posts written by one of the users you created by running the following code:
 
@@ -135,7 +135,7 @@ puts(first_post.recent_comments.to_json)
 first_post.update_posts_counter
 puts
 puts('Post counter: ')
-puts(first_post.author.post_counter)
+puts(first_post.author.posts_counter)
 
 first_comment.update_comments_counter
 puts('Comments counter: ')
@@ -155,7 +155,7 @@ puts(fifth_post.recent_comments.to_json)
 fifth_post.update_posts_counter
 puts
 puts('Post counter: ')
-puts(fifth_post.author.post_counter)
+puts(fifth_post.author.posts_counter)
 
 second_comment.update_comments_counter
 puts('Comments counter: ')

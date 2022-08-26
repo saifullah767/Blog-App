@@ -77,6 +77,21 @@
   width: 375px;
 }
 
+.all_users {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.user_element {
+  display: flex;
+  padding: 20px;
+  column-gap: 28px;
+  margin: 9px;
+  background-color: #efecec;
+}
+
 button {
   margin-top: 20px;
 }

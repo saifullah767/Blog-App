@@ -1,11 +1,32 @@
-<h1 class="post_heading">This is all posts of users</h1>
+<%= render "users/user_show" %>
+<div>
+  <% @posts.each do |post| %>
+    <div class='post_container'>
+      <div class='post_element'>
+        <h2>
+          <%= link_to post.title, user_post_path(@user, post) %>
+        </h2>
+        <p>
+          <%= post.text %>
+        </p>
+        <span>
+          Comments:<%= post.comments_counter %>, Likes: <%= post.likes_counter %>
+        </span>
+      </div>
+      <div class='comment_element'>
+        <% post.comments.includes(:author).limit(5).each do |comment| %>
+          <p>
+            <strong>
+              <%= comment.author.name %>:
+            </strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<div id="postTemplate">
-   <%= render partial: "shared/single_user", locals: { user: @user } %>
-<% @posts.each do |post| %>
-     <%= render partial: "shared/single_post", locals: { post: post } %>
-     <%= render partial: "shared/collection_comments", locals: { post: post, user: @user } %>
-<% end %>
-<%= button_to "Paginations"%>
- </div> 
- 
+<div class="pagination">
+  <%= link_to "New Post", new_user_post_path %><%= link_to "Paginations", users_path %>
+</div>

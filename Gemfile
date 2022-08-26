@@ -55,7 +55,10 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -74,10 +77,4 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-end
-
-group :development, :test do
-  gem 'ffi', '~> 1.15', '>= 1.15.5'
-  gem 'rails-controller-testing'
-  gem 'rspec-rails', '>= 3.9.0'
 end
