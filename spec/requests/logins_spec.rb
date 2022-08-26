@@ -115,4 +115,3 @@ RSpec.describe 'Logins', type: :request do
     end
   end
 end
-
