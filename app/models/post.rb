@@ -7,8 +7,21 @@ class Post < ApplicationRecord
   validates :comments_counter, comparison: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :likes_counter, comparison: { only_integer: true, greater_than_or_equal_to: 0 }
 
+<<<<<<< HEAD
   after_create do
     update_post
+=======
+  validates :title, presence: true, length: { in: 1..250 }
+  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  # Method that updates the posts counter for a user.
+
+  after_save :update_posts_counter
+
+  def update_posts_counter
+    author.update(post_counter: author.posts.count)
+>>>>>>> 9806e8ececf4a1407ab7d16abda977d4b8f6dfe4
   end
 
   def update_post

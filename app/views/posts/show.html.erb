@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class='post_element'>
   <div class='post_header'>
     <h2>
@@ -11,6 +12,26 @@
     <%= @post.text %>
   </p>
   <%= render "form" %>
+=======
+<h1 class="post_heading">This is specific post of specific users</h1>
+
+<div id="postTemplate">
+    <div id="singlePost">
+        <div id="postHeader">
+                <h3 class="post_title">Post <%= @post.id %> by <%= @user.name %> </h3>
+                <label class="counters">Comments:<%= @post.comments_counter %> Likes:<%= @post.likes_counter %> </label>
+        </div>  
+        <p><b><%= @post.title %></b></p>
+        <p><%= @post.text %></p>
+    </div>
+    <div id="commentsSection">
+                <% @comments.each do |comment| %>
+                <%= render partial: "shared/single_comment", locals: { comment: comment } %>
+                <% end %>
+     </div>
+     <%= button_to link_to "New Comment", new_user_post_comment_path(@user.id, @post.id) %>
+     <%= button_to "Add Likes", user_post_likes_path(@user, @post), params: { like: { author_id: @user.id, post_id: @post.id}}%>
+>>>>>>> 9806e8ececf4a1407ab7d16abda977d4b8f6dfe4
 </div>
 
 <div class='comment_element'>
