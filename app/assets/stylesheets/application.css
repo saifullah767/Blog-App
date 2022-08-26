@@ -107,7 +107,7 @@ button {
 }
 
 input[type="text"] {
-  margin: 0px;
+  margin: 0;
 }
 
 input[type="submit"] {
