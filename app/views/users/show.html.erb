@@ -1,14 +1,17 @@
-<h1 class="post_heading">This is for specific user</h1>
+<%= render "user_show" %>
 
-<div id="userTemplate">
-   <%= render partial: "shared/single_user", locals: { user: @user } %>
-   <div id="bio">
-   <h3>Bio</h3>
-   <p><%= @user.bio %></p>
-   </div>
+<div class='user_bio'><h3>Bio</h3><p><%= @user.bio %></p></div>
+
+<div>
 <% @posts.each do |post| %>
-     <%= render partial: "shared/single_post", locals: {user:@user, post: post } %>
+  <div class='post_container'>
+  <div class='post_element'>
+   <h3><%= link_to post.title, [post.author, post] %></h3>
+   <p><%= post.text%></p>
+   <span>Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%></span>
+   </div>
+   </div>
 <% end %>
-<%= button_to link_to "See all posts", user_path(@user) %>
-<%= button_to link_to "New Post", new_user_post_path(@user)%>
- </div>
+</div>
+
+<div><%= link_to "See All Posts", user_posts_path(@user) %></div>

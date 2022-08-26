@@ -1,0 +1,31 @@
+example_id                                        | status | run_time        |
+------------------------------------------------- | ------ | --------------- |
+./spec/views/posts/index.html.erb_spec.rb[1:1:1]  | passed | 0.33703 seconds |
+./spec/views/posts/index.html.erb_spec.rb[1:1:2]  | passed | 0.31046 seconds |
+./spec/views/posts/index.html.erb_spec.rb[1:1:3]  | passed | 2.84 seconds    |
+./spec/views/posts/index.html.erb_spec.rb[1:1:4]  | passed | 1.67 seconds    |
+./spec/views/posts/index.html.erb_spec.rb[1:1:5]  | passed | 0.4256 seconds  |
+./spec/views/posts/index.html.erb_spec.rb[1:1:6]  | passed | 0.3 seconds     |
+./spec/views/posts/index.html.erb_spec.rb[1:1:7]  | passed | 0.30164 seconds |
+./spec/views/posts/index.html.erb_spec.rb[1:1:8]  | passed | 0.34269 seconds |
+./spec/views/posts/index.html.erb_spec.rb[1:1:9]  | passed | 0.30295 seconds |
+./spec/views/posts/index.html.erb_spec.rb[1:1:10] | passed | 2.54 seconds    |
+./spec/views/posts/show.html.erb_spec.rb[1:1:1]   | passed | 0.31141 seconds |
+./spec/views/posts/show.html.erb_spec.rb[1:1:2]   | passed | 0.37034 seconds |
+./spec/views/posts/show.html.erb_spec.rb[1:1:3]   | passed | 0.33551 seconds |
+./spec/views/posts/show.html.erb_spec.rb[1:1:4]   | passed | 0.34297 seconds |
+./spec/views/posts/show.html.erb_spec.rb[1:1:5]   | passed | 2.38 seconds    |
+./spec/views/posts/show.html.erb_spec.rb[1:1:6]   | passed | 0.34451 seconds |
+./spec/views/posts/show.html.erb_spec.rb[1:1:7]   | passed | 0.32093 seconds |
+./spec/views/users/index.html.erb_spec.rb[1:1:1]  | passed | 0.4969 seconds  |
+./spec/views/users/index.html.erb_spec.rb[1:1:2]  | passed | 4.71 seconds    |
+./spec/views/users/index.html.erb_spec.rb[1:1:3]  | passed | 0.55062 seconds |
+./spec/views/users/index.html.erb_spec.rb[1:1:4]  | passed | 0.8202 seconds  |
+./spec/views/users/show.html.erb_spec.rb[1:1:1]   | passed | 0.47211 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:1:2]   | passed | 0.61903 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:1:3]   | passed | 0.45364 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:1:4]   | passed | 0.50701 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:1:5]   | passed | 0.48186 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:1:6]   | passed | 0.47545 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:1:7]   | passed | 0.46545 seconds |
+./spec/views/users/show.html.erb_spec.rb[1:1:8]   | passed | 4.72 seconds    |

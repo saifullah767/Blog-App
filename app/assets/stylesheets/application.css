@@ -13,93 +13,117 @@
  *= require_tree .
  *= require_self
  */
-#users {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
 }
 
-#singleUser,
-#postHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+body {
+  padding: 10px 5%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#singleUser > img {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.user_element {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.user_img {
+  width: fit-content;
   border: 1px solid black;
-  height: 100px;
-  width: 100px;
-  margin: 2px;
+  margin-right: 2rem;
 }
 
-#userInfo {
-  border: 1px solid black;
+.user_name {
   display: flex;
-  height: 100px;
-  width: 250px;
-  margin: 2px;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#bio,
-#singlePost,
-#commentsSection {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width: 345px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-.post_title {
-  margin: 5px 0;
-  text-align: left;
-}
-
-.counters {
-  text-align: right;
-}
-
-#newCommentsTemplate,
-#newPostTemplate,
-#userTemplate,
-#postTemplate {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  width: 375px;
-}
-
-button {
-  margin-top: 20px;
-}
-
-#newPostTemplate,
-#loginForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  align-items: center;
+  flex: 3;
+  margin: 0.5rem 0;
+  border: 1px solid black;
+  padding: 1rem;
 }
 
-input[type="text"] {
-  margin: 10px;
+.user_name h2 {
+  margin: 0;
+  font-size: 4rem;
 }
 
-input[type="submit"] {
-  margin: 30px;
+.user_name p {
+  margin: 0;
+  align-self: flex-end;
 }
 
-.post_heading {
+.user_bio {
+  border: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin: 0;
+}
+
+.user_bio p {
+  margin: 1rem 0;
+}
+
+.post_container {
+  margin-bottom: 1rem;
+}
+
+.post_element {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.post_element span {
+  align-self: flex-end;
+}
+
+.post_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_all {
+  display: flex;
+  justify-content: center;
+}
+
+.button_all a,
+input[type=submit] {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px 4px;
+  text-decoration: none;
+  color: black;
+}
+
+.comment_element {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.comment_element p {
+  margin: 0;
+}
+
+div.pagination {
+  color: black;
 }

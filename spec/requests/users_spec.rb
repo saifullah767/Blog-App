@@ -1,32 +1,35 @@
 require 'rails_helper'
 
-RSpec.describe 'Users Tests', type: :request do
-  context 'Index' do
-    before(:each) do
-      get '/users'
+RSpec.describe 'Users', type: :request do
+  describe 'GET /index' do
+    before(:example) { get '/users' }
+
+    it 'returns http success' do
+      expect(response).to have_http_status(:success)
     end
-    it 'Correct template was rendered.' do
-      expect(response).to render_template(:index)
+
+    it 'renders index template' do
+      expect(response).to render_template('index')
     end
-    it 'Response status was correct.' do
-      expect(response).to have_http_status(:ok)
-    end
-    it 'Includes correct placeholder text.' do
-      expect(response.body).to include('This is for all users')
+
+    it 'response body includes correct placeholder text' do
+      expect(response.body).to include('List of users')
     end
   end
-  context 'Show' do
-    before(:each) do
-      get '/users/1'
+
+  describe 'GET /show' do
+    before(:example) { get '/users/1' }
+
+    it 'returns http success' do
+      expect(response).to have_http_status(:success)
     end
-    it 'Correct template was rendered' do
-      expect(response).to render_template(:show)
+
+    it 'renders show template' do
+      expect(response).to render_template('show')
     end
-    it 'Response status was correct.' do
-      expect(response).to have_http_status(:ok)
-    end
-    it 'Includes correct placeholder text.' do
-      expect(response.body).to include('This is for specific user')
+
+    it 'body includes correct placeholder text' do
+      expect(response.body).to include('Details for given user')
     end
   end
 end

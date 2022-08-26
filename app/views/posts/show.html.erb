@@ -1,18 +1,31 @@
-<h1 class="post_heading">This is specific post of specific users</h1>
+<div class='post_element'>
+  <div class='post_header'>
+    <h2>
+      <%= @post.title %> by <%= User.find(@post.author_id).name %>
+    </h2>
+    <span>
+      Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
+    </span>
+  </div>
+  <p>
+    <%= @post.text %>
+  </p>
+  <%= render "form" %>
+</div>
 
-<div id="postTemplate">
-    <div id="singlePost">
-        <div id="postHeader">
-                <h3 class="post_title">Post <%= @post.id %> by <%= @user.name %> </h3>
-                <label class="counters">Comments:<%= @post.comments_counter %> Likes:<%= @post.likes_counter %> </label>
-        </div>  
-        <p><%= @post.text %></p>
-    </div>
-    <div id="commentsSection">
-                <% @comments.each do |comment| %>
-                <%= render partial: "shared/single_comment", locals: { comment: comment } %>
-                <% end %>
-     </div>
-     <%= button_to link_to "New Comment", new_user_post_comment_path(@user.id, @post.id) %>
-     <%= button_to "Add Likes", user_post_likes_path(@user, @post), params: { like: { author_id: @user.id, post_id: @post.id}}%>
+<div class='comment_element'>
+  <% @comments.each do |comment| %>
+    <p>
+      <strong>
+        <%= comment.author.name %>:
+      </strong>
+      <%= comment.text %>
+    </p>
+  <% end %>
+</div>
+
+<%= render 'comment_form' %>
+
+<div>
+  <%= link_to 'Paginations', users_path%>
 </div>
