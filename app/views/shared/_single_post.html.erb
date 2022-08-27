@@ -1,7 +1,9 @@
 <div id="singlePost">
-        <h3 class="post_title"> <%= link_to "Post ##{post.id}", user_post_path(params[:id],post.id) %> </h3>
-       <p><b><%= post.title %></b></p>
-
+        <h3 class="post_title"> <%= link_to "Post ##{post.id}", user_post_path(@user,post) %> </h3>
+        <p><b><%= post.title %></b></p>
         <p><%= post.text %></p>
         <label class="counters">Comments:<%= post.comments_counter %> Likes:<%= post.likes_counter %> </label>
+        <% if can? :destroy, post %>
+           <%= button_to "Delete", user_post_path(@user, post), method: :delete %>
+        <% end %>
 </div>

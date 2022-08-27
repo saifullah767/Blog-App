@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  has_many :comments
-  has_many :likes
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   # validations for title, comments_counter and likes_counter
 
@@ -13,7 +13,7 @@ class Post < ApplicationRecord
   after_save :update_posts_counter
 
   def update_posts_counter
-    author.update(post_counter: author.posts_count)
+    author.update(posts_counter: author.posts.count)
   end
 
   # Method which returns the 5 most recent comments for a given post.
