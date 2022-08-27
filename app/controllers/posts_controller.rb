@@ -17,8 +17,8 @@ class PostsController < ApplicationController
 
   def create
     parameters = post_params
-    post = Post.new(author_id: params[:user_id], title: parameters[:title], text: parameters[:text], comments_counter: 0,
-                     likes_counter: 0)
+    post = Post.new(author_id: params[:user_id], title: parameters[:title],
+                    text: parameters[:text], comments_counter: 0, likes_counter: 0)
     post.save
     # post.update_posts_counter
     if post.save
@@ -40,5 +40,5 @@ class PostsController < ApplicationController
     # puts "after Within destroy"
     flash[:notice] = "Post ##{params[:id]} has been deleted"
     redirect_to user_posts_path(current_user)
- end
+  end
 end

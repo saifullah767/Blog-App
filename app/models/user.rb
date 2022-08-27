@@ -21,5 +21,5 @@ class User < ApplicationRecord
 
   def role?
     role
-  end 
+  end
 end
