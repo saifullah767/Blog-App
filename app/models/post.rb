@@ -12,10 +12,8 @@ class Post < ApplicationRecord
   # Method that updates the posts counter for a user.
   after_save :update_posts_counter
 
-  after_save :update_posts_counter
-
   def update_posts_counter
-    author.update(posts_counter: author.posts.count)
+    author.update(post_counter: author.posts_count)
   end
 
   # Method which returns the 5 most recent comments for a given post.
